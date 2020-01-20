@@ -5,4 +5,5 @@ RUN set -x \
   && apk add --no-cache \
     syncthing
 
-ENTRYPOINT ["/usr/bin/syncthing"]
+COPY docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
